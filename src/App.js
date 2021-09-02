@@ -1,12 +1,38 @@
-import logo from './logo.svg';
+import styled from 'styled-components'
 import './App.css';
+import { Navbar } from './component/navbar/Navbar';
+import {Switch ,Route} from "react-router-dom"
+import { Home } from './component/Home/Home';
+
+
+const Container = styled.div`
+width: 200px;
+height:20px;
+background-color:black;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>hello world</h1>
-      </header>
+    <div>
+      <Navbar/>
+
+      <Switch>
+
+
+                <Route exact path = '/' activeStyle>
+                <Home/>
+
+                </Route>
+
+                <Route exact path = '/About' activeStyle>
+                    
+
+                </Route>
+            </Switch>
+
+    
+     
+    
     </div>
   );
 }
