@@ -44,7 +44,7 @@ font-size:4rem;
 const H2 = styled.h2`
 margin: 0;
 font-size:2.5rem;
-
+color:#b9732f;
 
 
 `

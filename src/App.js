@@ -3,17 +3,22 @@ import './App.css';
 import { Navbar } from './component/navbar/Navbar';
 import {Switch ,Route} from "react-router-dom"
 import { Home } from './component/Home/Home';
+import { Skills } from './component/skills/Skills';
+import { Projects } from './component/projects/Projects';
+import { Contact } from './component/contact/Contact';
+
 
 
 const Container = styled.div`
-width: 200px;
-height:20px;
-background-color:black;
+*{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 `
 
 function App() {
   return (
-    <div>
+    <Container>
       <Navbar/>
 
       <Switch>
@@ -28,12 +33,28 @@ function App() {
                     
 
                 </Route>
+                <Route exact path = '/Skills' activeStyle>
+                    <Skills/>  
+
+                </Route>
+
+                <Route exact path = '/Projects' activeStyle>
+                  
+                    <Projects/>
+                </Route>
+
+                <Route exact path = '/Contact' activeStyle>
+                  
+                <Contact/>
+
+                
+              </Route>
             </Switch>
 
     
      
     
-    </div>
+    </Container>
   );
 }
 
