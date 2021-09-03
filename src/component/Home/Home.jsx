@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import dp from "../../images/profilePic.png";
 import doc from '../../images/icons/document.svg'
-
+import gitIcons from '../../images/icons/github.png';
+import inkedin from "../../images/icons/linkedin.png"
+import twitter from "../../images/icons/twitter.svg"
 
 const Container = styled.div`
 display:flex;
@@ -51,7 +53,7 @@ const Resume = styled.div`
 width:30%;
 height:15%;
 border-radius:4%;
-margin:0 auto;
+margin-left:10%;
 margin-top:10%;
 display:block;
 background-color:#437fc7;
@@ -61,6 +63,25 @@ justify-content: space-evenly;
 color:#ffff;
 p{
     font-size:1.2rem;
+}
+&:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+`
+
+const Logo = styled.div`
+margin:auto;
+width:80px;
+height:150px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+
+img:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 `
 
@@ -96,11 +117,26 @@ export const Home = ()=>{
             <Profile>
                 <div>
 
-<img src = {dp} alt = "dp"/>
+        <img src = {dp} alt = "dp"/>
 
                 </div>
 
-                <div>Logos</div>
+                <Logo>
+                    
+                    <img src = {gitIcons} alt = "github" onClick={()=> {
+                        window.open("https://github.com/Rakesh-pilly").focus()
+                    }}/>
+                    <img src = {inkedin} alt = "github"
+                     onClick={()=> {
+                        window.open("https://www.linkedin.com/in/rakesh-pilly/").focus() }}
+                    />
+                    <img src = {twitter} alt = "github"  onClick={()=> {
+                        window.open("https://twitter.com/RakeshM11139132").focus() }}/>
+
+                                   
+
+
+                </Logo>
 
 
             </Profile>
